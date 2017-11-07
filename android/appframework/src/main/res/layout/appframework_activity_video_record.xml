@@ -1,0 +1,160 @@
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alibaba.weex.extend.module.widget.recorder.VideoRecordActivity">
+
+    <FrameLayout
+        android:id="@+id/appframework_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:background="@color/video_record_bg"
+        android:id="@+id/appframeworkRelativelayout">
+
+        <Button
+            android:id="@+id/appframework_switchButton"
+            android:layout_width="55sp"
+            android:layout_height="44sp"
+            android:background="@drawable/change_camera"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20sp"
+            android:layout_marginEnd="20sp"/>
+
+        <Button
+            android:id="@+id/appframework_flashButto"
+            android:layout_width="50sp"
+            android:layout_height="34sp"
+            android:layout_alignBaseline="@+id/appframework_switchButton"
+            android:layout_alignBottom="@+id/appframework_switchButton"
+            android:layout_marginEnd="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_toLeftOf="@+id/appframework_switchButton"
+            android:layout_toStartOf="@+id/appframework_switchButton"
+            android:background="@drawable/flashlight_off"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/appframework_closeButton"
+            android:layout_width="34sp"
+            android:layout_height="34sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:background="@drawable/close_video"
+            android:elevation="0dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/video_record_bg"
+        android:id="@+id/appframework_bottomView">
+
+        <Button
+            android:id="@+id/appframework_takeButton"
+            android:layout_width="105sp"
+            android:layout_height="105sp"
+            android:background="@drawable/video_record"
+            android:layout_alignTop="@+id/appframework_local"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/appframework_timeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27sp"
+            android:textColor="#FFFFFF"
+            android:text="00:00"/>
+
+        <RelativeLayout
+            android:layout_width="85sp"
+            android:layout_height="85sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/appframework_local">
+
+            <ImageView
+                android:id="@+id/appframeworkImageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/local_video"/>
+
+            <TextView
+                android:id="@+id/appframeworkTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appframeworkImageview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:text="本地视频"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/appframework_localButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/appframework_complete"
+            android:layout_width="85sp"
+            android:layout_height="85sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/appframework_local">
+
+            <ImageView
+                android:id="@+id/appframeworkImageview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/appframeworkTextview2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="11dp"
+                android:src="@drawable/record_complete"/>
+
+            <TextView
+                android:id="@+id/appframeworkTextview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:text="录制完成"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/appframework_completeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

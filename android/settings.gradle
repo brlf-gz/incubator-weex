@@ -7,3 +7,5 @@ project(":weex_sdk").projectDir=new File("sdk")
 
 include ":commons"
 include ":weex_debug"
+
+include ":appframework"

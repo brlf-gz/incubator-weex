@@ -176,6 +176,8 @@ public class WXSwipeLayout extends FrameLayout implements NestedScrollingParent 
    * Init refresh view or loading view
    */
   private void setRefreshView() {
+    //add by zhangwei
+    if(headerView != null) return;
     // SetUp HeaderView
     FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, 0);
     headerView = new WXRefreshView(getContext());
