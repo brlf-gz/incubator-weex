@@ -79,20 +79,20 @@ dependencies {
     compile files('libs/umeng_social_net.jar')
     compile files('libs/umeng_social_shareboard.jar')
     compile files('libs/umeng_social_tool.jar')
-    compile files('libs/wechat-sdk-android-with-mta-1.1.6.jar')
+    compile files('libs/wechat_sdk_1_1_6.jar')
     compile 'com.github.brlf-gz:BRScanner:1.0.0'
     compile 'com.github.brlf-gz:BRCrop:1.0.0'
     compile 'com.github.brlf-gz:BRVideoRecord:1.0.0'
-//    compile 'com.github.brlf-gz.incubator-weex:SmallVideoLib:0.16.4@aar'
-//    compile 'com.github.brlf-gz.incubator-weex:open_sdk_r5788_lite:0.16.4@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:SocialSDK_QQ_Full:0.16.4@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:SocialSDK_WeiXin_Full:0.16.4@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:umeng_shareboard_widget:0.16.4@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_api:0.16.4@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_net:0.16.4@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_shareboard:0.16.4@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_tool:0.16.4@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:wechat_sdk:0.16.4@jar'
+//    compile 'com.github.brlf-gz.incubator-weex:SmallVideoLib:0.16.6@aar'
+//    compile 'com.github.brlf-gz.incubator-weex:open_sdk_r5788_lite:0.16.6@jar'
+//    compile 'com.github.brlf-gz.incubator-weex:SocialSDK_QQ_Full:0.16.6@jar'
+//    compile 'com.github.brlf-gz.incubator-weex:SocialSDK_WeiXin_Full:0.16.6@jar'
+//    compile 'com.github.brlf-gz.incubator-weex:umeng_shareboard_widget:0.16.6@jar'
+//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_api:0.16.6@jar'
+//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_net:0.16.6@jar'
+//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_shareboard:0.16.6@jar'
+//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_tool:0.16.6@jar'
+//    compile 'com.github.brlf-gz.incubator-weex:wechat_sdk_1_1_6:0.16.6@jar'
     compile(name: 'SmallVideoLib', ext: 'aar')
 }
 
@@ -110,7 +110,7 @@ artifacts {
     archives file: file('libs/umeng_social_net.jar'), name: 'umeng_social_net', type: 'jar'
     archives file: file('libs/umeng_social_shareboard.jar'), name: 'umeng_social_shareboard', type: 'jar'
     archives file: file('libs/umeng_social_tool.jar'), name: 'umeng_social_tool', type: 'jar'
-    archives file: file('libs/wechat-sdk-android-with-mta-1.1.6.jar'), name: 'wechat_sdk', type: 'jar'
+    archives file: file('libs/wechat_sdk_1_1_6.jar'), name: 'wechat_sdk_1_1_6', type: 'jar'
 }
 
 
@@ -144,8 +144,8 @@ install {
             addFilter('umeng_social_tool') {artifact, file ->
                 artifact.name == 'umeng_social_tool'
             }
-            addFilter('wechat_sdk') {artifact, file ->
-                artifact.name == 'wechat_sdk'
+            addFilter('wechat_sdk_1_1_6') {artifact, file ->
+                artifact.name == 'wechat_sdk_1_1_6'
             }
         }
     }
