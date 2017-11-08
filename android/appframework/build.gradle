@@ -46,7 +46,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+//    compile fileTree(include: ['*.jar'], dir: 'libs')
     provided 'com.android.support:support-v4:23.1.1'
     provided 'com.android.support:appcompat-v7:23.1.1'
     provided 'com.taobao.android:weex_sdk:0.10.0'
@@ -71,82 +71,82 @@ dependencies {
     testCompile 'org.robolectric:robolectric:3.0-rc3'
     compile 'com.alibaba:fastjson:1.2.38'
     compile 'com.umeng.analytics:analytics:latest.integration'
-    compile files('libs/open_sdk_r5788_lite.jar')
-    compile files('libs/SocialSDK_QQ_Full.jar')
-    compile files('libs/SocialSDK_WeiXin_Full.jar')
-    compile files('libs/umeng_shareboard_widget.jar')
-    compile files('libs/umeng_social_api.jar')
-    compile files('libs/umeng_social_net.jar')
-    compile files('libs/umeng_social_shareboard.jar')
-    compile files('libs/umeng_social_tool.jar')
-    compile files('libs/wechat_sdk_1_1_6.jar')
+//    compile files('libs/open_sdk_r5788_lite.jar')
+//    compile files('libs/SocialSDK_QQ_Full.jar')
+//    compile files('libs/SocialSDK_WeiXin_Full.jar')
+//    compile files('libs/umeng_shareboard_widget.jar')
+//    compile files('libs/umeng_social_api.jar')
+//    compile files('libs/umeng_social_net.jar')
+//    compile files('libs/umeng_social_shareboard.jar')
+//    compile files('libs/umeng_social_tool.jar')
+//    compile files('libs/wechat_sdk_1_1_6.jar')
+//    compile(name: 'SmallVideoLib', ext: 'aar')
     compile 'com.github.brlf-gz:BRScanner:1.0.0'
     compile 'com.github.brlf-gz:BRCrop:1.0.0'
     compile 'com.github.brlf-gz:BRVideoRecord:1.0.0'
-//    compile 'com.github.brlf-gz.incubator-weex:SmallVideoLib:0.16.6@aar'
-//    compile 'com.github.brlf-gz.incubator-weex:open_sdk_r5788_lite:0.16.6@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:SocialSDK_QQ_Full:0.16.6@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:SocialSDK_WeiXin_Full:0.16.6@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:umeng_shareboard_widget:0.16.6@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_api:0.16.6@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_net:0.16.6@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_shareboard:0.16.6@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:umeng_social_tool:0.16.6@jar'
-//    compile 'com.github.brlf-gz.incubator-weex:wechat_sdk_1_1_6:0.16.6@jar'
-    compile(name: 'SmallVideoLib', ext: 'aar')
+    compile 'com.github.brlf-gz.incubator-weex:SmallVideoLib:0.16.6@aar'
+    compile 'com.github.brlf-gz.incubator-weex:open_sdk_r5788_lite:0.16.6@jar'
+    compile 'com.github.brlf-gz.incubator-weex:SocialSDK_QQ_Full:0.16.6@jar'
+    compile 'com.github.brlf-gz.incubator-weex:SocialSDK_WeiXin_Full:0.16.6@jar'
+    compile 'com.github.brlf-gz.incubator-weex:umeng_shareboard_widget:0.16.6@jar'
+    compile 'com.github.brlf-gz.incubator-weex:umeng_social_api:0.16.6@jar'
+    compile 'com.github.brlf-gz.incubator-weex:umeng_social_net:0.16.6@jar'
+    compile 'com.github.brlf-gz.incubator-weex:umeng_social_shareboard:0.16.6@jar'
+    compile 'com.github.brlf-gz.incubator-weex:umeng_social_tool:0.16.6@jar'
+    compile 'com.github.brlf-gz.incubator-weex:wechat_sdk_1_1_6:0.16.6@jar'
 }
 
 task wrapper(type: Wrapper) {
   gradleVersion = '2.10'
 }
 
-artifacts {
-    archives file: file('libs/open_sdk_r5788_lite.jar'), name: 'open_sdk_r5788_lite', type: 'jar'
-    archives file: file('libs/SmallVideoLib.aar'), name: 'SmallVideoLib', type: 'aar'
-    archives file: file('libs/SocialSDK_QQ_Full.jar'), name: 'SocialSDK_QQ_Full', type: 'jar'
-    archives file: file('libs/SocialSDK_WeiXin_Full.jar'), name: 'SocialSDK_WeiXin_Full', type: 'jar'
-    archives file: file('libs/umeng_shareboard_widget.jar'), name: 'umeng_shareboard_widget', type: 'jar'
-    archives file: file('libs/umeng_social_api.jar'), name: 'umeng_social_api', type: 'jar'
-    archives file: file('libs/umeng_social_net.jar'), name: 'umeng_social_net', type: 'jar'
-    archives file: file('libs/umeng_social_shareboard.jar'), name: 'umeng_social_shareboard', type: 'jar'
-    archives file: file('libs/umeng_social_tool.jar'), name: 'umeng_social_tool', type: 'jar'
-    archives file: file('libs/wechat_sdk_1_1_6.jar'), name: 'wechat_sdk_1_1_6', type: 'jar'
-}
-
-
-install {
-    repositories {
-        mavenInstaller {
-            addFilter('open_sdk_r5788_lite') {artifact, file ->
-                artifact.name == 'open_sdk_r5788_lite'
-            }
-            addFilter('SmallVideoLib') {artifact, file ->
-                artifact.name == 'SmallVideoLib'
-            }
-            addFilter('SocialSDK_QQ_Full') {artifact, file ->
-                artifact.name == 'SocialSDK_QQ_Full'
-            }
-            addFilter('SocialSDK_WeiXin_Full') {artifact, file ->
-                artifact.name == 'SocialSDK_WeiXin_Full'
-            }
-            addFilter('umeng_shareboard_widget') {artifact, file ->
-                artifact.name == 'umeng_shareboard_widget'
-            }
-            addFilter('umeng_social_api') {artifact, file ->
-                artifact.name == 'umeng_social_api'
-            }
-            addFilter('umeng_social_net') {artifact, file ->
-                artifact.name == 'umeng_social_net'
-            }
-            addFilter('umeng_social_shareboard') {artifact, file ->
-                artifact.name == 'umeng_social_shareboard'
-            }
-            addFilter('umeng_social_tool') {artifact, file ->
-                artifact.name == 'umeng_social_tool'
-            }
-            addFilter('wechat_sdk_1_1_6') {artifact, file ->
-                artifact.name == 'wechat_sdk_1_1_6'
-            }
-        }
-    }
-}
+//artifacts {
+//    archives file: file('libs/open_sdk_r5788_lite.jar'), name: 'open_sdk_r5788_lite', type: 'jar'
+//    archives file: file('libs/SmallVideoLib.aar'), name: 'SmallVideoLib', type: 'aar'
+//    archives file: file('libs/SocialSDK_QQ_Full.jar'), name: 'SocialSDK_QQ_Full', type: 'jar'
+//    archives file: file('libs/SocialSDK_WeiXin_Full.jar'), name: 'SocialSDK_WeiXin_Full', type: 'jar'
+//    archives file: file('libs/umeng_shareboard_widget.jar'), name: 'umeng_shareboard_widget', type: 'jar'
+//    archives file: file('libs/umeng_social_api.jar'), name: 'umeng_social_api', type: 'jar'
+//    archives file: file('libs/umeng_social_net.jar'), name: 'umeng_social_net', type: 'jar'
+//    archives file: file('libs/umeng_social_shareboard.jar'), name: 'umeng_social_shareboard', type: 'jar'
+//    archives file: file('libs/umeng_social_tool.jar'), name: 'umeng_social_tool', type: 'jar'
+//    archives file: file('libs/wechat_sdk_1_1_6.jar'), name: 'wechat_sdk_1_1_6', type: 'jar'
+//}
+//
+//
+//install {
+//    repositories {
+//        mavenInstaller {
+//            addFilter('open_sdk_r5788_lite') {artifact, file ->
+//                artifact.name == 'open_sdk_r5788_lite'
+//            }
+//            addFilter('SmallVideoLib') {artifact, file ->
+//                artifact.name == 'SmallVideoLib'
+//            }
+//            addFilter('SocialSDK_QQ_Full') {artifact, file ->
+//                artifact.name == 'SocialSDK_QQ_Full'
+//            }
+//            addFilter('SocialSDK_WeiXin_Full') {artifact, file ->
+//                artifact.name == 'SocialSDK_WeiXin_Full'
+//            }
+//            addFilter('umeng_shareboard_widget') {artifact, file ->
+//                artifact.name == 'umeng_shareboard_widget'
+//            }
+//            addFilter('umeng_social_api') {artifact, file ->
+//                artifact.name == 'umeng_social_api'
+//            }
+//            addFilter('umeng_social_net') {artifact, file ->
+//                artifact.name == 'umeng_social_net'
+//            }
+//            addFilter('umeng_social_shareboard') {artifact, file ->
+//                artifact.name == 'umeng_social_shareboard'
+//            }
+//            addFilter('umeng_social_tool') {artifact, file ->
+//                artifact.name == 'umeng_social_tool'
+//            }
+//            addFilter('wechat_sdk_1_1_6') {artifact, file ->
+//                artifact.name == 'wechat_sdk_1_1_6'
+//            }
+//        }
+//    }
+//}
