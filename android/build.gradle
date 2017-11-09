@@ -16,6 +16,10 @@ plugins {
 //    id "com.github.dcendents.android-maven" version "1.5"
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 repositories {
         mavenCentral()
         jcenter()

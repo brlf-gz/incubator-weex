@@ -45,6 +45,10 @@ android {
   }
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     provided 'com.android.support:support-v4:23.1.1'
@@ -97,57 +101,57 @@ dependencies {
 //    compile 'com.github.brlf-gz.incubator-weex:wechat_sdk_1_1_6:0.16.6@jar'
 }
 
-task wrapper(type: Wrapper) {
-  gradleVersion = '2.10'
-}
+//task wrapper(type: Wrapper) {
+//  gradleVersion = '2.10'
+//}
 
 artifacts {
-//    archives file: file('libs/open_sdk_r5788_lite.jar'), name: 'open_sdk_r5788_lite', type: 'jar'
+    archives file: file('libs/open_sdk_r5788_lite.jar'), name: 'open_sdk_r5788_lite', type: 'jar'
     archives file: file('libs/SmallVideoLib.aar'), name: 'smallvideolib', type: 'aar'
-//    archives file: file('libs/SocialSDK_QQ_Full.jar'), name: 'SocialSDK_QQ_Full', type: 'jar'
-//    archives file: file('libs/SocialSDK_WeiXin_Full.jar'), name: 'SocialSDK_WeiXin_Full', type: 'jar'
-//    archives file: file('libs/umeng_shareboard_widget.jar'), name: 'umeng_shareboard_widget', type: 'jar'
-//    archives file: file('libs/umeng_social_api.jar'), name: 'umeng_social_api', type: 'jar'
-//    archives file: file('libs/umeng_social_net.jar'), name: 'umeng_social_net', type: 'jar'
-//    archives file: file('libs/umeng_social_shareboard.jar'), name: 'umeng_social_shareboard', type: 'jar'
-//    archives file: file('libs/umeng_social_tool.jar'), name: 'umeng_social_tool', type: 'jar'
-//    archives file: file('libs/wechat_sdk_1_1_6.jar'), name: 'wechat_sdk_1_1_6', type: 'jar'
+    archives file: file('libs/SocialSDK_QQ_Full.jar'), name: 'SocialSDK_QQ_Full', type: 'jar'
+    archives file: file('libs/SocialSDK_WeiXin_Full.jar'), name: 'SocialSDK_WeiXin_Full', type: 'jar'
+    archives file: file('libs/umeng_shareboard_widget.jar'), name: 'umeng_shareboard_widget', type: 'jar'
+    archives file: file('libs/umeng_social_api.jar'), name: 'umeng_social_api', type: 'jar'
+    archives file: file('libs/umeng_social_net.jar'), name: 'umeng_social_net', type: 'jar'
+    archives file: file('libs/umeng_social_shareboard.jar'), name: 'umeng_social_shareboard', type: 'jar'
+    archives file: file('libs/umeng_social_tool.jar'), name: 'umeng_social_tool', type: 'jar'
+    archives file: file('libs/wechat_sdk_1_1_6.jar'), name: 'wechat_sdk_1_1_6', type: 'jar'
 }
 
 
 install {
     repositories {
         mavenInstaller {
-//            addFilter('open_sdk_r5788_lite') {artifact, file ->
-//                artifact.name == 'open_sdk_r5788_lite'
-//            }
+            addFilter('open_sdk_r5788_lite') {artifact, file ->
+                artifact.name == 'open_sdk_r5788_lite'
+            }
             addFilter('smallvideolib') {artifact, file ->
                 artifact.name == 'smallvideolib'
             }
-//            addFilter('SocialSDK_QQ_Full') {artifact, file ->
-//                artifact.name == 'SocialSDK_QQ_Full'
-//            }
-//            addFilter('SocialSDK_WeiXin_Full') {artifact, file ->
-//                artifact.name == 'SocialSDK_WeiXin_Full'
-//            }
-//            addFilter('umeng_shareboard_widget') {artifact, file ->
-//                artifact.name == 'umeng_shareboard_widget'
-//            }
-//            addFilter('umeng_social_api') {artifact, file ->
-//                artifact.name == 'umeng_social_api'
-//            }
-//            addFilter('umeng_social_net') {artifact, file ->
-//                artifact.name == 'umeng_social_net'
-//            }
-//            addFilter('umeng_social_shareboard') {artifact, file ->
-//                artifact.name == 'umeng_social_shareboard'
-//            }
-//            addFilter('umeng_social_tool') {artifact, file ->
-//                artifact.name == 'umeng_social_tool'
-//            }
-//            addFilter('wechat_sdk_1_1_6') {artifact, file ->
-//                artifact.name == 'wechat_sdk_1_1_6'
-//            }
+            addFilter('SocialSDK_QQ_Full') {artifact, file ->
+                artifact.name == 'SocialSDK_QQ_Full'
+            }
+            addFilter('SocialSDK_WeiXin_Full') {artifact, file ->
+                artifact.name == 'SocialSDK_WeiXin_Full'
+            }
+            addFilter('umeng_shareboard_widget') {artifact, file ->
+                artifact.name == 'umeng_shareboard_widget'
+            }
+            addFilter('umeng_social_api') {artifact, file ->
+                artifact.name == 'umeng_social_api'
+            }
+            addFilter('umeng_social_net') {artifact, file ->
+                artifact.name == 'umeng_social_net'
+            }
+            addFilter('umeng_social_shareboard') {artifact, file ->
+                artifact.name == 'umeng_social_shareboard'
+            }
+            addFilter('umeng_social_tool') {artifact, file ->
+                artifact.name == 'umeng_social_tool'
+            }
+            addFilter('wechat_sdk_1_1_6') {artifact, file ->
+                artifact.name == 'wechat_sdk_1_1_6'
+            }
         }
     }
 }
